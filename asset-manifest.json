@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/round42multiplayer/static/js/main.cc553c90.js",
-    "index.html": "/round42multiplayer/index.html",
-    "main.cc553c90.js.map": "/round42multiplayer/static/js/main.cc553c90.js.map"
+    "main.js": "/Round42Multiplayer/static/js/main.cc553c90.js",
+    "index.html": "/Round42Multiplayer/index.html",
+    "main.cc553c90.js.map": "/Round42Multiplayer/static/js/main.cc553c90.js.map"
   },
   "entrypoints": [
     "static/js/main.cc553c90.js"

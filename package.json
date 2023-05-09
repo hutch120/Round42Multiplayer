@@ -6,6 +6,8 @@
   "description": "Round 42 Multiplayer",
   "license": "MIT",
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -30,11 +32,12 @@
     "@types/react-dom": "^18.2.4",
     "@types/react-redux": "7.1.25",
     "eslint": "^8.24.0",
-    "prettier": "^2.7.1",
-    "typescript": "^5.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.31.8"
+    "eslint-plugin-react": "^7.31.8",
+    "gh-pages": "^5.0.0",
+    "prettier": "^2.7.1",
+    "typescript": "^5.0.4"
   },
   "browserslist": {
     "production": [

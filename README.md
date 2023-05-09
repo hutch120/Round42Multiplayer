@@ -11,7 +11,7 @@
 
 Massive shout out to Onno Invernizzi, thanks for getting this game into a format I'm familiar with, JS/TS. I too remember spending way too many hours playing this game as a kid! Now, doing the same as an adult!! LOL
 
-## V1.0.1 - General Code Cleanup
+## V1.0.1 - CRA conversion
 
 - Updated to latest CRA (Create React App) for Typescript
 - Updated all node module libraries

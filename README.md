@@ -11,10 +11,9 @@ https://hutch120.github.io/Round42Multiplayer
 - Fun backgrounds
 - And whatever else I can think of, ideas most welcome!
 
-Massive shout out to Onno Invernizzi, thanks for getting this game into a format I'm familiar with, JS/TS. I too remember spending way too many hours playing this game as a kid! Now, doing the same as an adult!! LOL
-
 ## V1.0.1 - CRA conversion
 
+- Massive shout out to Onno Invernizzi, thanks for getting this game into a format I'm familiar with, JS/TS. I also remember spending way too many hours playing this game as a kid! Now, doing the same as an adult!! LOL
 - Updated to latest CRA (Create React App) for Typescript
 - Updated all node module libraries
 - Removed custom webpack and random built tooling

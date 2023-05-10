@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Round42Multiplayer/static/css/main.84e6a67b.css",
-    "main.js": "/Round42Multiplayer/static/js/main.62c642ec.js",
+    "main.js": "/Round42Multiplayer/static/js/main.ccc0716d.js",
     "index.html": "/Round42Multiplayer/index.html",
     "main.84e6a67b.css.map": "/Round42Multiplayer/static/css/main.84e6a67b.css.map",
-    "main.62c642ec.js.map": "/Round42Multiplayer/static/js/main.62c642ec.js.map"
+    "main.ccc0716d.js.map": "/Round42Multiplayer/static/js/main.ccc0716d.js.map"
   },
   "entrypoints": [
     "static/css/main.84e6a67b.css",
-    "static/js/main.62c642ec.js"
+    "static/js/main.ccc0716d.js"
   ]
 }

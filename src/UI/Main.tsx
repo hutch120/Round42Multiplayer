@@ -11,7 +11,6 @@ import ApplicationState from '../State/ApplicationState'
 import { GameOptions } from './GameOptions'
 import GameOver from './GameOver'
 import MainMenu from './MainMenu'
-import * as Styles from './Styles'
 
 /**
  * Module:          Main

@@ -32,16 +32,16 @@ export const Music = {
   Music: 'sound/Music/Music.wav'
 }
 export const Phasers = [
-  'sound/Phasers/01.wav',
-  'sound/Phasers/02.wav',
-  'sound/Phasers/03.wav',
-  'sound/Phasers/04.wav',
-  'sound/Phasers/05.wav',
-  'sound/Phasers/06.wav',
-  'sound/Phasers/07.wav',
-  'sound/Phasers/08.wav',
-  'sound/Phasers/09.wav',
-  'sound/Phasers/10.wav'
+  'sound/Phaser/01.wav',
+  'sound/Phaser/02.wav',
+  'sound/Phaser/03.wav',
+  'sound/Phaser/04.wav',
+  'sound/Phaser/05.wav',
+  'sound/Phaser/06.wav',
+  'sound/Phaser/07.wav',
+  'sound/Phaser/08.wav',
+  'sound/Phaser/09.wav',
+  'sound/Phaser/10.wav'
 ]
 export const Player = {
   FormationFast: 'sound/Player/FormationFast.wav',

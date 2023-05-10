@@ -49,8 +49,8 @@ export function getDefaultKeyBindings(): KeybindingsState {
     downKey: 'ArrowDown',
     leftKey: 'ArrowLeft',
     rightKey: 'ArrowRight',
-    fireKey: 'F1',
-    phaserKey: 'F2',
+    fireKey: 'KeyF',
+    phaserKey: 'KeyF',
     pauseKey: 'Space',
     menu: 'KeyQ'
   }

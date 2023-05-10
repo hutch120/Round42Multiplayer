@@ -23,7 +23,7 @@ export default function Main(): JSX.Element {
   const [gameResult, setGameResult] = useState<GameResultModel>()
 
   return (
-    <div style={Styles.root}>
+    <div>
       {(screenState === 'mainmenu' && <MainMenu setGameResult={setGameResult} />) ||
         (screenState === 'gameover' && <GameOver gameResult={gameResult} />) ||
         (screenState === 'options' && <GameOptions />)}

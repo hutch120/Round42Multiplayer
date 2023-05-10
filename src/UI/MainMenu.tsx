@@ -55,7 +55,7 @@ export default function MainMenu(props: {
 
   return (
     <div style={ViewableScreen}>
-      <img src="Round42Multiplayer/images/landing.jpg" style={ImageFullBackground} />
+      <img src="images/landing.jpg" style={ImageFullBackground} />
       <button onClick={() => onStartGame()} className="push--skeuo" style={PlayButton}>
         Play
       </button>

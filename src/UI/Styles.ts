@@ -29,7 +29,7 @@ const alignLeft: CSSProperties = {
 }
 
 const defaultFont: CSSProperties = {
-  fontFamily: 'DOS',
+  fontFamily: 'monospace',
   fontSize: 24
 }
 
@@ -63,9 +63,9 @@ export const ingamePage: CSSProperties = {
 
 export const defaultContainer: CSSProperties = {
   ...alignLeft,
-  padding: '1em',
-  margin: '1em 1em 0 1em',
-  backgroundColor: CGAColors.blue
+  maxWidth: 800,
+  padding: 0,
+  margin: 0
 }
 
 export const header: CSSProperties = {
@@ -78,7 +78,7 @@ export const header: CSSProperties = {
 
 export const textStyle: CSSProperties = {
   ...defaultFont,
-  color: CGAColors.white
+  color: CGAColors.green
 }
 
 export const textEmphasisStyle: CSSProperties = {
@@ -89,7 +89,8 @@ export const textEmphasisStyle: CSSProperties = {
 export const defaultTextContainer: CSSProperties = {
   ...textStyle,
   ...defaultContainer,
-  flexDirection: 'column'
+  flexDirection: 'column',
+  padding: 50
 }
 
 export const optionsContainer: CSSProperties = {
@@ -107,15 +108,15 @@ export const buttonContainer: CSSProperties = {
 export const tableStyle: CSSProperties = {
   ...defaultFont,
   borderCollapse: 'separate',
-  borderSpacing: '0.1em'
+  borderSpacing: 0
 }
 
 export const tableCellStyle: CSSProperties = {
   ...textStyle,
-  borderColor: CGAColors.white,
-  borderStyle: 'solid',
-  borderWidth: '0.1em',
-  padding: '0.1em',
+  borderColor: CGAColors.darkGray,
+  borderStyle: 'none',
+  borderWidth: '0.01em',
+  padding: 0,
   textAlign: 'center',
   minWidth: 120
 }

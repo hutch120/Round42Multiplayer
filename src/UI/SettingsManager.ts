@@ -50,9 +50,9 @@ export function getDefaultKeyBindings(): KeybindingsState {
     leftKey: 'ArrowLeft',
     rightKey: 'ArrowRight',
     fireKey: 'KeyF',
-    phaserKey: 'KeyF',
-    pauseKey: 'Space',
-    menu: 'KeyQ'
+    phaserKey: 'KeyG',
+    pauseKey: 'KeyP',
+    menu: 'KeyM'
   }
 }
 

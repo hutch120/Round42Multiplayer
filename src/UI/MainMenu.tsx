@@ -9,15 +9,19 @@ import GameResultModel from '../Models/GameResultModel'
 import { startGame } from '../StartGame'
 import { setGameInProgress, setScreenState } from '../State/Game/GameActions'
 import { dispatch } from '../State/Store'
+import GameConnect from './GameConnect'
 
 const ViewableScreen: CSSProperties = {}
 
-const ImageText: CSSProperties = {
-  position: 'absolute',
-  width: '50%',
-  top: '20%',
-  left: '50%',
-  transform: 'translateX(-50%) translateY(-50%)'
+const GameNameText: CSSProperties = {
+  position: 'fixed',
+  width: '100vw',
+  top: 100,
+  fontSize: 80,
+  fontFamily: 'Roboto',
+  textAlign: 'center',
+  display: 'block',
+  color: '#ff8100'
 }
 
 const ImageFullBackground: CSSProperties = {
@@ -31,19 +35,31 @@ const ImageFullBackground: CSSProperties = {
 
 const PlayButton: CSSProperties = {
   position: 'fixed',
-  right: '20px',
-  bottom: '20px',
-  fontFamily: 'monospace',
-  fontSize: 'xxx-large'
+  width: '100vw',
+  top: 200,
+  backgroundColor: 'tranparent',
+  border: 'none',
+  color: 'tranparent',
+  cursor: 'pointer',
+  textAlign: 'center'
+}
+
+const PlayButtonImg: CSSProperties = {
+  height: 260
 }
 
 const SettingsButton: CSSProperties = {
   position: 'fixed',
-  right: '20px',
-  top: '10px',
-  margin: '0 auto',
-  fontFamily: 'monospace',
-  fontSize: 'large'
+  right: 20,
+  top: 10,
+  backgroundColor: 'tranparent',
+  border: 'none',
+  color: 'tranparent',
+  cursor: 'pointer'
+}
+
+const SettingsButtonImg: CSSProperties = {
+  height: 60
 }
 
 export default function MainMenu(props: {
@@ -68,14 +84,15 @@ export default function MainMenu(props: {
 
   return (
     <div style={ViewableScreen}>
-      <img src="images/landing/02.jpg" style={ImageFullBackground} />
-      <img src="images/landing/text.png" style={ImageText} />
-      <button onClick={() => onStartGame()} className="push--skeuo" style={PlayButton}>
-        Play
-      </button>
-      <button onClick={() => dispatch(setScreenState('options'))} style={SettingsButton}>
-        Settings
-      </button>
+      <img src="images/landing/04.jpg" style={ImageFullBackground} />
+      <div style={GameNameText}>Round42</div>
+      <div onClick={() => onStartGame()} style={PlayButton}>
+        <img src="images/play.png" style={PlayButtonImg} />
+      </div>
+      <div onClick={() => dispatch(setScreenState('options'))} style={SettingsButton}>
+        <img src="images/settings.png" style={SettingsButtonImg} />
+      </div>
+      <GameConnect />
     </div>
   )
 }

@@ -4,7 +4,7 @@
  * See LICENSE.MD.
  */
 
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import debug from './Debugging/Debug'
 import { appStore } from './State/Store'
@@ -27,11 +27,13 @@ if (
   // not want this.
   debug()
 } else {
-  // Otherwise load the UI.
-  ReactDOM.render(
-    <Provider store={appStore()}>
-      <Main />
-    </Provider>,
-    document.getElementById('root')
-  )
+  const container = document.getElementById('root')
+  if (container) {
+    const root = createRoot(container)
+    root.render(
+      <Provider store={appStore()}>
+        <Main />
+      </Provider>
+    )
+  }
 }

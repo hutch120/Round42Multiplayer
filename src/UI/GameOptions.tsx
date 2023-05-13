@@ -4,6 +4,7 @@
  * See LICENSE.MD.
  */
 
+import { CSSProperties } from 'react'
 import { ReactElement, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import * as Canvas from '../Render/Canvas'
@@ -24,6 +25,35 @@ import * as Styles from './Styles'
 import { AsciiCheckbox } from './Components/AsciiCheckbox'
 import { AsciiSlider } from './Components/AsciiSlider'
 
+const OptionsWrapper: CSSProperties = {
+  maxWidth: 800,
+  padding: 40
+}
+
+const ImageFullBackground: CSSProperties = {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100vw',
+  height: '100vh',
+  padding: 0,
+  margin: 0,
+  zIndex: -1
+}
+
+const CloseButton: CSSProperties = {
+  position: 'fixed',
+  right: '20px',
+  top: '10px',
+  backgroundColor: 'tranparent',
+  border: 'none',
+  color: 'tranparent',
+  cursor: 'pointer'
+}
+
+const CloseButtonImg: CSSProperties = {
+  height: 60
+}
 const checkboxChars = ['[', ']', '\u00A0', 'x']
 
 const sliderChars = [
@@ -111,9 +141,8 @@ export function GameOptions(): JSX.Element {
   }
 
   return (
-    <div style={gameInProgress ? Styles.ingamePage : Styles.page}>
-      {gameInProgress && <div style={Styles.spacer} />}
-      <p style={Styles.header}>Options</p>
+    <div style={OptionsWrapper}>
+      <img src="images/landing/04.jpg" style={ImageFullBackground} />
       <div style={Styles.defaultContainer}>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           {!gameInProgress && <span style={Styles.textStyle}>Adjust game speed</span>}
@@ -201,13 +230,17 @@ export function GameOptions(): JSX.Element {
       {!gameInProgress && <div style={Styles.spacer} />}
       <div style={Styles.buttonContainer}>
         {gameInProgress ? (
-          <HoverButton disabled={listening} onClick={continueGame} text="Continue" />
+          <div onClick={continueGame} className="" style={CloseButton}>
+            <img src="images/close.png" style={CloseButtonImg} />
+          </div>
         ) : (
-          <HoverButton
-            disabled={listening}
+          <div
             onClick={() => dispatch(setScreenState('mainmenu'))}
-            text="Main menu"
-          />
+            className=""
+            style={CloseButton}
+          >
+            <img src="images/close.png" style={CloseButtonImg} />
+          </div>
         )}
       </div>
       {gameInProgress && <div style={Styles.spacer} />}

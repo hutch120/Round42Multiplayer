@@ -102,6 +102,8 @@ export function GameOptions(): JSX.Element {
 
     // Update the speed state. This triggers calculations and is stored in a seperate state.
     dispatch(setSpeed(value))
+
+    SettingsManager.storeSetting('gamespeed', value + '')
   }
 
   /**
@@ -110,6 +112,7 @@ export function GameOptions(): JSX.Element {
    */
   function onPlaySoundChange(value: boolean): void {
     dispatch(setSoundStateSetting(value))
+    SettingsManager.storeSetting('playsound', value + '')
   }
 
   function changeBinding(key: keyof KeybindingsState): void {

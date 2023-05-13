@@ -30,7 +30,7 @@ export function getSettings(): SettingsState {
   const keybindings = window.localStorage.getItem(StorageKeys.keybindings)
 
   return {
-    gameSpeed: gameSpeed === null ? 100 : parseInt(gameSpeed, 10),
+    gameSpeed: gameSpeed === null ? 50 : parseInt(gameSpeed, 10),
     playSound: playSound === null ? true : playSound === 'true',
     keybindings: keybindings === null ? getDefaultKeyBindings() : JSON.parse(keybindings)
   }
@@ -50,7 +50,7 @@ export function getDefaultKeyBindings(): KeybindingsState {
     leftKey: 'ArrowLeft',
     rightKey: 'ArrowRight',
     fireKey: 'KeyF',
-    phaserKey: 'KeyG',
+    phaserKey: 'KeyS', // S - Special
     pauseKey: 'KeyP',
     menu: 'KeyM'
   }

@@ -35,7 +35,7 @@ export function calculateTimeSpeedIncrease(time: number, factor: number): number
  * @returns {KeyValuePair}. An array of keys and valyes.
  */
 export function getURLQueryKVPs(query: string): KeyValuePair[] {
-  const kvps = query.split('?')
+  const kvps = query.replace('?', '').split('&')
   return kvps.map((item) => {
     const kvp = item.split('=')
     return {

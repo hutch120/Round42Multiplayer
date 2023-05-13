@@ -10,7 +10,7 @@ import GameResultModel from '../Models/GameResultModel'
 import ApplicationState from '../State/ApplicationState'
 import { GameOptions } from './GameOptions'
 import GameOver from './GameOver'
-import MainMenu from './MainMenu'
+import Landing from './Landing'
 
 /**
  * Module:          Main
@@ -23,7 +23,7 @@ export default function Main(): JSX.Element {
 
   return (
     <div>
-      {(screenState === 'mainmenu' && <MainMenu setGameResult={setGameResult} />) ||
+      {(screenState === 'mainmenu' && <Landing setGameResult={setGameResult} />) ||
         (screenState === 'gameover' && <GameOver gameResult={gameResult} />) ||
         (screenState === 'options' && <GameOptions />)}
     </div>

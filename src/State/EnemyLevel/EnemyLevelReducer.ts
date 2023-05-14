@@ -26,6 +26,8 @@ export default function enemyLevelReducer(
 ): EnemyLevelState {
   const newState = produce(state, (draft) => {
     switch (action.type) {
+      case EnemyLevelEnum.tick:
+        return action.payload.enemyLevelState // Replace entire state. https://immerjs.github.io/immer/return/
       case EnemyLevelEnum.addExplosionCenter:
         draft.explosionCenters.push(action.explosionCenter)
         draft.shrapnells.push(...action.shrapnell)
@@ -59,10 +61,8 @@ export default function enemyLevelReducer(
         if (index > -1) {
           draft.enemies[index].lastFiretick = action.payload.tick
         }
-
         break
       }
-
       case EnemyLevelEnum.setEnemies: {
         draft.enemies = action.enemies
         break

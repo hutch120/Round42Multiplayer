@@ -19,8 +19,10 @@ import {
 import { addLifeAndPhaser } from '../State/Game/GameActions'
 import * as StateProviders from '../State/StateProviders'
 import { appState, dispatch } from '../State/Store'
+import { HandleTickUpdates } from '../Multiplayer/Connect'
 
 export default function genericRunner(tick: number): void {
+  HandleTickUpdates(tick)
   handleExplosionCenters(tick)
   handleBullets()
   handleShrapnell()

@@ -247,7 +247,7 @@ function run(tick: number): void {
     // Stop everything.
     stop()
 
-    // Rester the state of the levelProgressionRunner.
+    // Register the state of the levelProgressionRunner.
     resetLevelProgression()
 
     // Reset the entire game.

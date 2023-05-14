@@ -13,6 +13,7 @@ import keyboardStateReducer from './Keyboard/KeyboardStateReducer'
 import playerReducer from './Player/PlayerReducer'
 import { settingsReducer } from './Settings/SettingsReducer'
 import speedReducer from './Speed/SpeedReducer'
+// import { HandleActionUpdates } from '../Multiplayer/Connect'
 
 /**
  * Module:          Store
@@ -62,5 +63,7 @@ export function appStore(): Store {
  * @param {Action} action. An action.
  */
 export function dispatch(action: Action): void {
+  // If host, send all dispatch messages to connected multiplayer challengers.
+  // HandleActionUpdates(action)
   store.dispatch(action)
 }

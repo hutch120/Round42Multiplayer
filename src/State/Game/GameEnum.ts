@@ -8,6 +8,7 @@
  * Responsibility:  Constants used by the GameState reducer and by the Action creator functions
  */
 enum GameStateEnum {
+  tick,
   setLives = 2000,
   removeLife,
   increaseScore,

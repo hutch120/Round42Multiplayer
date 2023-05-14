@@ -14,15 +14,6 @@ const CreateUser1Button: CSSProperties = {
   fontSize: 'large'
 }
 
-const SendMessageButton: CSSProperties = {
-  position: 'fixed',
-  left: '20px',
-  top: '40px',
-  margin: '0 auto',
-  fontFamily: 'monospace',
-  fontSize: 'large'
-}
-
 export default function GameConnect(): JSX.Element {
   useEffect(() => {
     if (window.location.search.includes('host')) {
@@ -34,9 +25,6 @@ export default function GameConnect(): JSX.Element {
     <div>
       <button onClick={() => Peers.ConnectToGame(Peers.GAME_1)} style={CreateUser1Button}>
         ConnectToGame
-      </button>
-      <button onClick={() => Peers.SendMessage('test')} style={SendMessageButton}>
-        Send Message
       </button>
     </div>
   )

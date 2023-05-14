@@ -237,11 +237,7 @@ export function GameOptions(): JSX.Element {
             <img src="images/close.png" style={CloseButtonImg} />
           </div>
         ) : (
-          <div
-            onClick={() => dispatch(setScreenState('mainmenu'))}
-            className=""
-            style={CloseButton}
-          >
+          <div onClick={() => dispatch(setScreenState('landing'))} className="" style={CloseButton}>
             <img src="images/close.png" style={CloseButtonImg} />
           </div>
         )}

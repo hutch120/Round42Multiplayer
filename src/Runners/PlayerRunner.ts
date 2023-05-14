@@ -90,6 +90,7 @@ function handlePlayerBulletMovement(): void {
   const { playerState } = appState()
   if (playerState.bulletState !== undefined) {
     const bullet = playerState.bulletState
+    if (!bullet) return
     const nextLocation = getLocation(bullet.left, bullet.top, bullet.angle, bullet.speed)
     const newHitbox = getFrameHitbox(nextLocation.left, nextLocation.top, bullet.coloredFrame)
 

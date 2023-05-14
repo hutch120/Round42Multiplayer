@@ -52,7 +52,7 @@ export default function GameOver(props: { gameResult: GameResultModel | undefine
         </table>
       </div>
       <div style={Styles.buttonContainer}>
-        <HoverButton onClick={() => dispatch(setScreenState('mainmenu'))} text="Ok" />
+        <HoverButton onClick={() => dispatch(setScreenState('landing'))} text="Ok" />
       </div>
       <div style={Styles.spacer} />
     </div>

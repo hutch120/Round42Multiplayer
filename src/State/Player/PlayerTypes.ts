@@ -15,6 +15,10 @@ import { ParticleState } from '../ParticleState'
 import PlayerEnum from './PlayerEnum'
 import { PlayerHitboxes } from './PlayerState'
 
+export interface Tick {
+  type: typeof PlayerEnum.tick
+  payload: any
+}
 export interface SetPlayerIsAlive {
   type: typeof PlayerEnum.setPlayerIsAlive
   playerIsAlive: boolean
@@ -41,6 +45,7 @@ export interface SetPlayerBulletState {
 }
 
 export type PlayerStateTypes =
+  | Tick
   | SetPlayerIsAlive
   | SetPlayerMovementLimit
   | SetPlayerLocationData

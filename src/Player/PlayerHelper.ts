@@ -32,8 +32,8 @@ export default function playerIsHit(
     return false
   }
 
-  const hitMiddle = overlaps(playerHitboxes.middle, hitbox)
-  const hitBottom = overlaps(playerHitboxes.bottom, hitbox)
+  const hitMiddle = overlaps(playerHitboxes?.middle, hitbox)
+  const hitBottom = overlaps(playerHitboxes?.bottom, hitbox)
 
   return hitMiddle || hitBottom
 }

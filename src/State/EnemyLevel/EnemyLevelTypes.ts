@@ -15,6 +15,10 @@ import EnemyLevelEnum from './EnemyLevelEnum'
 import { EnemyState } from './EnemyState'
 import { ExplosionCenterState } from './ExplosionCenterState'
 
+export interface Tick {
+  type: typeof EnemyLevelEnum.tick
+  payload: any
+}
 export interface ResetLevelState {
   type: typeof EnemyLevelEnum.resetLevelState
 }
@@ -77,6 +81,7 @@ export interface SetEnemies {
   enemies: EnemyState[]
 }
 export type EnemyLevelTypes =
+  | Tick
   | ResetLevelState
   | SetShrapnellState
   | AddExplosionCenter

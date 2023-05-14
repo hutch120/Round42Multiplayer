@@ -18,7 +18,7 @@ import getWarpGateComplexity from './WarpGateComplexities'
 /**
  * gameStateReducer
  * @param {DebuggingState} state. The current state.
- * @param {GameStateTypes} action. The desired action with optional paylood.
+ * @param {GameStateTypes} action. The desired action with optional payload.
  * @returns {GameState}. New state.
  */
 export default function gameStateReducer(
@@ -27,6 +27,8 @@ export default function gameStateReducer(
 ): GameState {
   return produce(state, (draft) => {
     switch (action.type) {
+      case GameStateEnum.tick:
+        return action.payload.gameState // Replace entire state. https://immerjs.github.io/immer/return/
       case GameStateEnum.increaseScore:
         draft.score += action.payload
         break
@@ -55,7 +57,6 @@ export default function gameStateReducer(
         } else if (draft.level !== undefined) {
           draft.level++
         }
-
         break
       case GameStateEnum.addLifeAndPhaser:
         draft.lives++
@@ -83,7 +84,6 @@ export default function gameStateReducer(
       case GameStateEnum.enemyHit:
         draft.enemiesHit++
         break
-
       case GameStateEnum.bulletFired:
         draft.bulletsFired++
         break
@@ -125,6 +125,6 @@ function initState(): GameState {
     enemiesHit: 0,
     timeLevelTimeLimit: 20000, // 20 seconds
     hardMode: false,
-    screenState: 'mainmenu'
+    screenState: 'landing'
   }
 }

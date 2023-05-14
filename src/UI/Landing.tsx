@@ -1,5 +1,5 @@
 /**
- * Module:          MainMenu
+ * Module:          Landing
  * Responsibility:  Shows the main menu of the game.
  */
 import './Landing.css'
@@ -85,10 +85,11 @@ const SettingsButtonImg: CSSProperties = {
   height: 60
 }
 
-export default function MainMenu(props: {
+export default function Landing(props: {
   setGameResult(result: GameResultModel): void
 }): JSX.Element {
   const { setGameResult } = props
+
   function onStartGame(): void {
     // Remove the menu UI from screen.
     dispatch(setScreenState('playing'))

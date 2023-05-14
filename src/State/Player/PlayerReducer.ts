@@ -30,6 +30,8 @@ export default function playerReducer(
 ): PlayerState {
   return produce(state, (draft) => {
     switch (action.type) {
+      case PlayerEnum.tick:
+        return action.payload.playerState // Replace entire state. https://immerjs.github.io/immer/return/
       case PlayerEnum.setPlayerIsAlive:
         draft.alive = action.playerIsAlive
         break

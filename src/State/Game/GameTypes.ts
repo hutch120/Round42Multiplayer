@@ -13,6 +13,10 @@ import GameStateEnum from './GameEnum'
 import { ScreenState } from './UITypes'
 import { WarpLevelComplexity } from './WarpLevelTypes'
 
+export interface Tick {
+  type: typeof GameStateEnum.tick
+  payload: any
+}
 export interface IncreaseScore {
   type: typeof GameStateEnum.increaseScore
   payload: number
@@ -103,6 +107,7 @@ export interface SetGameInProgress {
 }
 
 export type GameStateTypes =
+  | Tick
   | IncreaseScore
   | SetLives
   | RemoveLife

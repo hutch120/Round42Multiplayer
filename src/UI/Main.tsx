@@ -23,7 +23,7 @@ export default function Main(): JSX.Element {
 
   return (
     <div>
-      {(screenState === 'mainmenu' && <Landing setGameResult={setGameResult} />) ||
+      {(screenState === 'landing' && <Landing setGameResult={setGameResult} />) ||
         (screenState === 'gameover' && <GameOver gameResult={gameResult} />) ||
         (screenState === 'options' && <GameOptions />)}
     </div>

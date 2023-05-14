@@ -135,7 +135,7 @@ function handleHitDetection(tick: number) {
  */
 function playerHitEnemyDetection(tick: number) {
   const { playerState, enemyLevelState } = appState()
-  if (playerState.bulletState !== undefined && playerState.bulletState.hitbox !== undefined) {
+  if (playerState?.bulletState?.hitbox) {
     const playerBulletHitbox = playerState.bulletState.hitbox
     const hitEnemy = enemyLevelState.enemies.find((e) => {
       if (overlaps(playerBulletHitbox, e.hitbox)) {
@@ -265,7 +265,7 @@ function handlePhaser(tick: number): void {
     playerState.alive && // cant fire when dead
     keyboardState.phraser && // Fire phaser key was pressed.
     enemyLevelState.enemies.length > 0 && // The phaser cannot hit a random enemy if there are none.
-    gameState.phasers > 0 && // You need phaser charged to firel
+    gameState.phasers > 0 && // You need phaser charged to fire
     enemyLevelState.phaserLocations.length === 0 && // You cannot fire a phaser while one is still on screen
     playerState.nozzleLocation
   ) {

@@ -12,7 +12,7 @@
 /**
  * Screen states of the UI.
  */
-export type ScreenState = 'mainmenu' | 'playing' | 'about' | 'gameover' | 'options'
+export type ScreenState = 'landing' | 'playing' | 'about' | 'gameover' | 'options'
 
 /**
  * Supported game settings.

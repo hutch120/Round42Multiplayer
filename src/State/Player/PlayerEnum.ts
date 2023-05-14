@@ -21,6 +21,7 @@
  */
 
 enum PlayerEnum {
+  tick,
   setPlayerIsAlive = 3000,
   setPlayerMovementLimit,
   setPlayerLocationData,

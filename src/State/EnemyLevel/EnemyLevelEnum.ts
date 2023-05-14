@@ -10,6 +10,7 @@
  */
 
 enum EnemyLevelEnum {
+  tick,
   resetLevelState = 1000,
   setShrapnellState,
   addExplosionCenter,

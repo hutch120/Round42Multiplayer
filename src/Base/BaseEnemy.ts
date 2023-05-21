@@ -82,12 +82,11 @@ export default abstract class BaseEnemy {
 
   /**
    * Creates an instance of BaseEnemy.
-   * @param {number} frameChangeTime. Time between frames.
-   * @param {OffsetFramesProviderFunction} getOffsetFrames. Returns an OffsetFrames object.
-   * @param {ExplosionProviderFunction} getExplosion. Returns an explosion object.
-   * @param {ILocationProvider} locationProvider. Provides the location of the enemy.
-   * @param {BaseFrameProvider} frameProvider. Provides the frame of the enemy.
-   * @param {FireAngleProviderFunction} [fireAngleProvider]. Provides a fire hangle for the enemy.
+   * @param {number} frameChangeTime Time between frames.
+   * @param {OffsetFramesProviderFunction} getOffsetFrames Returns an OffsetFrames object.
+   * @param {ExplosionProviderFunction} getExplosion Returns an explosion object.
+   * @param {ILocationProvider} locationProvider Provides the location of the enemy.
+   * @param {BaseFrameProvider} frameProvider Provides the frame of the enemy.
    * @memberof BaseEnemy
    */
   constructor(
